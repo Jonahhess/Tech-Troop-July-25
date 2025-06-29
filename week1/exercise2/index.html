@@ -8,79 +8,82 @@
   </head>
 
   <body>
-    <h1 id="back-to-top">Thanks for visiting my website!</h1>
-    <h2>Introduction</h2>
-    <p>Hi there! My name is Jonah Hess. Nice to meet you!</p>
-    <p>What is your name?</p>
-    <input type="text" placeholder="Enter your name here" />
-
-    <button
-      onclick="alert('Hello, ' + document.querySelector('input').value + '!')"
-    >
-      Submit
-    </button>
-    <hr />
-    <h2>Here are some things to know about me</h2>
-    <ul>
-      <li>
-        I'm a <strong>Software Engineer</strong> currently living in
-        <em>Jerusalem, Israel.</em>
-      </li>
-      <li>I was born in <em>Los Angeles, California</em></li>
-      <li>My family made Aliyah when I was seven years old</li>
-      <li>
-        I have a Bachelor's degree in <strong>Computer Science</strong> from the
-        <em>Jerusalem College of Technology</em>
-      </li>
-    </ul>
-    <hr />
-
-    <h2>My Hobbies</h2>
-    <p>In my free time, I enjoy:</p>
-    <ul>
-      <li>Spending time with my wife and daughter</li>
-      <li>Learning <strong>Japanese</strong></li>
-      <li>Exploring new <em>technologies and programming languages</em></li>
-      <li>Cooking and trying out new recipes</li>
-      <li>Creating <strong>unordered lists</strong></li>
-      <li>Singing <em>alone</em> and in <em>choirs</em></li>
-    </ul>
-    <hr />
-
-    <h2>Contact Me</h2>
-    <p>If you'd like to get in touch, you can reach me at:</p>
-    <ul>
-      <li>
-        Email:
-        <a href="mailto:jonahhessdev@gmail.com">jonahhessdev@gmail.com</a>
-      </li>
-      <li>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/jonah-hess/"
-          >linkedin.com/in/jonah-hess/</a
-        >
-      </li>
-      <li>
-        GitHub:
-        <a href="https://github.com/Jonahhess/Tech-Troop-July-25/blob/main/"
-          >github.com/Jonahhess/Tech-Troop-July-25</a
-        >
-      </li>
-    </ul>
+    <h1 id="back-to-top">Exercise 2</h1>
     <p>
-      Feel free to reach out if you have any questions or just want to chat!
+      This is the second exercise for the Tech Troop July 25 session. The goal
+      is to practice HTML and CSS skills.
     </p>
-    <hr />
-    <h2>Thank You!</h2>
-    <p>Thank you for taking the time to visit my personal website.</p>
-    <p>I hope you found it informative and enjoyable.</p>
+    <h2>Practice creating ordered and unordered lists with nested elements.</h2>
+
+    <h3>Requirements</h3>
+
     <p>
-      If you have any feedback or suggestions, please feel free to reach out.
-      I'm always looking to improve and connect with others in the tech
-      community!
+      Create a page about your favorite things.
+       Use both ordered (ol) and unordered (ul) lists
     </p>
-    <p>Have a great day!</p>
-    <br />
+    <div>
+      <p>
+      Include at least one nested list. 
+      Add a main heading and subheadings.
+      Include brief descriptions for each category
+    </p>
+    <!--A list of some lists-->
+    <ul>
+      <!--A list of my favorite foods, with the specific variation listed for fun-->
+      <li>
+        Favorite Foods
+        <ul>
+         
+          <li>Pizza</li>
+           <ul>
+            <li>Cheese</li>
+            <li>Onion</li>
+            <li>Vegetarian</li>
+          </ul>
+          <li>Sushi</li>
+            <ul>
+            <li>Tuna</li>
+            <li>Salmon</li>
+            <li>Hand roll</li>
+          </ul>
+          <li>Ice Cream</li>
+            <ul>
+            <li>Chocolate</li>
+            <li>Vanilla</li>
+            <li>Pistachio</li>
+          </ul>
+        </ul>
+      </li>
+
+      <!--A list of my favorite hobbies, with the specific hobby listed in order of preference-->
+      <li>
+        Favorite Hobbies (ranked in order of preference):
+        <ol>
+          <li>Programming</li>
+          <li>Web Design</li>
+          <li>Breathing</li>
+        </ol>
+      </li>
+      <!--A list of my favorite movies, with the specific movie listed in no particular order-->
+      <li>
+        Favorite Movies
+        <ul>
+          <li>The Shawshank Redemption</li>
+          <li>The Godfather</li>
+          <li>Pulp Fiction</li>
+        </ul>
+      </li>
+      <!--A list of my favorite music genres, with the specific genre listed in no particular order-->
+      <li>
+        Favorite Music Genres (in no particular order, but still using an ordered list):
+        <ol>
+          <li>Rock</li>
+          <li>Jazz</li>
+          <li>Classical</li>
+        </ol>
+      </li>
+    </ul>
+
     <footer>
       <p>&copy; 2023 Jonah Hess. All rights reserved.</p>
       <a href="#back-to-top">Back to top</a>
