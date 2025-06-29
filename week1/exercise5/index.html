@@ -4,82 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Exercise 5 - Table</title>
+    <title>Exercise 5 - Contact Form</title>
   </head>
 
   <body>
-    <h1 id="back-to-top">Thanks for visiting my table!</h1>
-    <p>Create a structured table with proper formatting.</p>
+    <h1 id="back-to-top">Thanks for visiting my contact form!</h1>
+    <p>Create a comprehensive contact form using various input types.</p>
     <h3>Requirements</h3>
     <ul>
-      <li>Create a table with at least 4 columns and 5 rows</li>
-      <li>Include table headers</li>
-      <li>Use table caption</li>
-      <li>Include a summary or description of the table data</li>
+      <li>Create a contact form with multiple input types</li>
+      <li>Include proper labels for all form elements</li>
+      <li>Use fieldsets to group related form elements</li>
+      <li>
+        Include various input types (text, email, tel, textarea, select, radio,
+        checkbox)
+      </li>
+      <li>Add a submit and reset button</li>
+      <li>Include placeholder text and required attributes</li>
     </ul>
-    <hr />
 
-    <!--Table-->
-    <table border="1" style="width: 100%; text-align: center">
-      <caption>
-        Sample Data Table
-      </caption>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Description</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Color</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Apple</td>
-          <td>Fresh red apple</td>
-          <td>$0.50</td>
-          <td>10</td>
-          <td>Red</td>
-        </tr>
-        <tr>
-          <td>Banana</td>
-          <td>Ripe banana</td>
-          <td>$0.30</td>
-          <td>20</td>
-          <td>Yellow</td>
-        </tr>
-        <tr>
-          <td>Orange</td>
-          <td>Juicy orange</td>
-          <td>$0.60</td>
-          <td>15</td>
-          <td>Orange</td>
-        </tr>
-        <tr>
-          <td>Mango</td>
-          <td>Sweet mango</td>
-          <td>$1.00</td>
-          <td>5</td>
-          <td>Yellow</td>
-        </tr>
-        <tr>
-          <td>Grapes</td>
-          <td>Fresh grapes</td>
-          <td>$2.00</td>
-          <td>8</td>
-          <td>Purple</td>
-        </tr>
-      </tbody>
-    </table>
-    <hr />
+    <!--Contact Form-->
+    <form id="contact form">
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        /><br />
 
-    <h3>Summary</h3>
-    <p>We see various fruit, along with their price and color.</p>
-    <p>
-      We can conclude that purple fruits are more expensive, while red fruit is
-      cheap.
-    </p>
-    <hr />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        /><br />
+
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+        /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Message</legend>
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          placeholder="Type your message here..."
+          required
+        ></textarea
+        ><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <label for="contact-method">Preferred Contact Method:</label><br />
+        <select id="contact-method" name="contact-method" required>
+          <option value="">Select...</option>
+          <option value="email">Email</option>
+          <option value="phone">Phone</option></select
+        ><br />
+
+        <label>Subscribe to Newsletter:</label><br />
+        <input type="checkbox" id="subscribe" name="subscribe" /> Yes,
+        please!<br />
+
+        <label>How did you hear about us?</label><br />
+        <input type="radio" id="friend" name="referral" value="friend" />
+        <label for="friend">Friend</label><br />
+        <input type="radio" id="search" name="referral" value="search" />
+        <label for="search">Search Engine</label><br />
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
 
     <h2>Contact Me</h2>
     <p>
