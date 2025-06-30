@@ -1,0 +1,17 @@
+div.links-container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 15%;
+  justify-content: space-around;
+}
+
+button {
+  background-color: yellow;
+  font-size: 16px;
+  display: inline-block;
+  font-family: arial;
+}
+button:hover {
+  background-color: purple;
+}
