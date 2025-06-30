@@ -1,0 +1,21 @@
+body {
+  font: arial;
+  background-color: beige;
+  max-width: 800px;
+}
+
+strong {
+  color: purple;
+}
+
+em {
+  color: green;
+}
+
+h1 {
+  color: navy;
+}
+h2,
+hr {
+  color: blue;
+}
