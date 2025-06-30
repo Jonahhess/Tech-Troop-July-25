@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Exercise 5 - Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1 id="back-to-top">Thanks for visiting my contact form!</h1>
+    <p>Create a comprehensive contact form using various input types.</p>
+    <h3>Requirements</h3>
+    <ul>
+      <li>Create a contact form with multiple input types</li>
+      <li>Include proper labels for all form elements</li>
+      <li>Use fieldsets to group related form elements</li>
+      <li>
+        Include various input types (text, email, tel, textarea, select, radio,
+        checkbox)
+      </li>
+      <li>Add a submit and reset button</li>
+      <li>Include placeholder text and required attributes</li>
+    </ul>
+
+    <!--Contact Form-->
+    <form id="contact form">
+      <fieldset>
+        <legend>Contact Information</legend>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        /><br />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        /><br />
+
+        <label for="phone">Phone:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter your phone number"
+        /><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Message</legend>
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          placeholder="Type your message here..."
+          required
+        ></textarea
+        ><br />
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <label for="contact-method">Preferred Contact Method:</label><br />
+        <select id="contact-method" name="contact-method" required>
+          <option value="">Select...</option>
+          <option value="email">Email</option>
+          <option value="phone">Phone</option></select
+        ><br />
+
+        <label>Subscribe to Newsletter:</label><br />
+        <input type="checkbox" id="subscribe" name="subscribe" /> Yes,
+        please!<br />
+
+        <label>How did you hear about us?</label><br />
+        <input type="radio" id="friend" name="referral" value="friend" />
+        <label for="friend">Friend</label><br />
+        <input type="radio" id="search" name="referral" value="search" />
+        <label for="search">Search Engine</label><br />
+      </fieldset>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    <h2>Contact Me</h2>
+    <p>
+      If you have any questions, feel free to
+      <a href="mailto:jonahhessdev@gmail.com">email me</a>.
+    </p>
+    <hr />
+    <footer>
+      <p>&copy; 2023 Jonah Hess. All rights reserved.</p>
+      <a href="#back-to-top">Back to top</a>
+    </footer>
+  </body>
+</html>
