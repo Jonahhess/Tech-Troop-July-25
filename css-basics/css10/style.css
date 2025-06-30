@@ -1,0 +1,32 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(30, 40, 66);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: orange;
+  text-align: center;
+}
+
+h2,
+hr {
+  color: orangered;
+}
+
+h3,
+a {
+  color: lightblue;
+}
+
+p,
+li {
+  color: lightgray;
+  font-size: 1.2em;
+}
+
+img {
+  width: 500px;
+  height: auto;
+}
