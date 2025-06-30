@@ -1,0 +1,11 @@
+div {
+  width: 40%;
+}
+
+section {
+  display: inline-block;
+  background-color: pink;
+  border: 3px solid black;
+  height: 50px;
+  width: calc(100% / 3 - 9px);
+}
