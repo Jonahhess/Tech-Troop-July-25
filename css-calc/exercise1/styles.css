@@ -1,0 +1,14 @@
+section {
+  display: inline-block;
+  height: 50px;
+}
+
+#left {
+  background-color: pink;
+  width: calc(50% - 20px);
+}
+
+#right {
+  width: 20px;
+  background-color: salmon;
+}
