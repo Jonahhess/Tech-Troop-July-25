@@ -1,0 +1,37 @@
+ul > li {
+  list-style-type: circle;
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  background-color: aliceblue;
+  width: 50%;
+}
+li > ul > li {
+  background-color: rgba(0, 0, 100, 0.3);
+  width: 50%;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+  background-color: lightgray;
+  width: 50%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 15px;
+  background-color: lightyellow;
+  width: 50%;
+}
