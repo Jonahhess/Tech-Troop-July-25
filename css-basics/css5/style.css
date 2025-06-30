@@ -1,0 +1,23 @@
+.header-row {
+  background-color: lightgrey;
+  padding: 5px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+table {
+  font-family: arial;
+  background-color: lightgreen;
+  border: none;
+  border-collapse: collapse;
+  width: 50%;
+  text-align: left;
+}
+
+td,
+th {
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+}
