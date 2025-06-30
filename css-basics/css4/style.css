@@ -1,0 +1,30 @@
+#container {
+	background-color: lightgray;
+	height: 128px;
+	width: 190px;
+	margin: 30px;
+	border: 40px;
+	box-shadow: 3px 3px 3px;
+	font-family: arial;
+	font-size: 14px;
+}
+
+.box {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+}
+
+#first {
+	background-color: aquamarine;
+}
+
+#second {
+	background-color: orange;
+}
+
+.button {
+	background-color: lightgreen;
+	border: 0px;
+}
