@@ -1,0 +1,71 @@
+div.container {
+  height: 250px;
+  width: 500px;
+  background-color: rgb(94, 76, 230);
+  position: relative;
+  top: 50px;
+  left: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+div > * {
+  position: absolute;
+}
+
+p {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+p.money {
+  top: -20px;
+  left: 10px;
+}
+
+p.time {
+  bottom: -20px;
+  right: 10px;
+}
+
+div > div {
+  background-color: lightgrey;
+  width: 30px;
+}
+
+div.bar1 {
+  bottom: 10px;
+  left: 10px;
+  height: 50px;
+}
+
+div.bar2 {
+  bottom: 10px;
+  left: 80px;
+  height: 150px;
+}
+
+div.bar3 {
+  bottom: 10px;
+  left: 150px;
+  height: 200px;
+}
+
+div.bar4 {
+  bottom: 10px;
+  left: 220px;
+  height: 175px;
+}
+
+div.bar5 {
+  bottom: 10px;
+  left: 290px;
+  height: 160px;
+}
+
+div.bar6 {
+  bottom: 10px;
+  left: 360px;
+  height: 100px;
+}
