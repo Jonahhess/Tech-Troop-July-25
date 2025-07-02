@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+  background-color: aliceblue;
+  border: 1px solid red;
+}
+
+.col {
+  height: 500px;
+  min-width: 100px;
+  border: 1px solid red;
+  justify-content: center;
+
+  display: flex;
+}
+
+.col#col2 {
+  flex: 1;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+ul {
+  margin: 30px;
+}
