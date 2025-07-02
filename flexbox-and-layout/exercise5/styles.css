@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 1px;
+  background-color: beige;
+}
+
+.flex-container {
+  display: flex;
+  height: 50vw;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#first {
+  flex: 2;
+}
+
+.box {
+  background-color: rgb(89, 89, 223);
+  flex: 1;
+}
