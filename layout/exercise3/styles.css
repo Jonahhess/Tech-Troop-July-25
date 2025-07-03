@@ -80,6 +80,12 @@ form > .subject-priority > div {
   flex-direction: column;
 }
 
+form > .subject-priority > div > input {
+  color: black;
+  padding: 5px;
+  margin: 1px;
+}
+
 form > .subject-priority > div > input::placeholder {
   color: black;
 }
