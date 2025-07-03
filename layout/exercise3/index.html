@@ -8,63 +8,67 @@
   </head>
   <body>
     <main>
-      <h1>Contact Form</h1>
+      <h2>Contact Form</h2>
       <h3>Get in touch with us</h3>
       <form action="#">
         <div class="name-section">
-          <label for="firstname">First Name</label>
-          <input type="text" id="firstname" />
-          <label for="lastname">Last Name</label>
-          <input type="text" id="lastname" />
-          <div class="email-section">
-            <label for="email">Email</label>
-            <input type="email" id="email" />
+          <div class="fname">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" />
           </div>
-          <div class="subject-priority">
-            <div class="subject">
-              <p>Select a topic</p>
-              <ul>
-                <li>CS</li>
-                <li>Math</li>
-                <li>Physics</li>
-              </ul>
-            </div>
-            <div class="priority">
-              <p>Priority</p>
-              <ul>
-                <li>Low</li>
-                <li>Medium</li>
-                <li>High</li>
-              </ul>
-            </div>
+          <div class="lname">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" />
           </div>
-          <div class="message">
-            <label for="message">Message</label>
-            <input
-              type="text"
-              id="message"
-              placeholder="Tell us how we can
+        </div>
+        <div class="email-section">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+        </div>
+        <div class="subject-priority">
+          <div class="subject">
+            <p>Select a topic</p>
+            <ul>
+              <li>CS</li>
+              <li>Math</li>
+              <li>Physics</li>
+            </ul>
+          </div>
+          <div class="priority">
+            <p>Priority</p>
+            <ul>
+              <li>Low</li>
+              <li>Medium</li>
+              <li>High</li>
+            </ul>
+          </div>
+        </div>
+        <div class="message">
+          <label for="message">Message</label>
+          <input
+            type="text"
+            id="message"
+            placeholder="Tell us how we can
             help..."
-            />
+          />
+        </div>
+        <div class="contact-preferences">
+          <p>Contact Preferences</p>
+          <div class="checkboxes">
+            <input type="checkbox" id="email-updates" />
+            <label for="email-updates">Email Updates</label>
+            <input type="checkbox" id="phone" />
+            <label for="phone">Phone Follow-up</label>
+            <input type="checkbox" id="newsletter" />
+            <label for="newsletter">Newsletter</label>
           </div>
-          <div class="contact-preferences">
-            <p>Contact Preferences</p>
-            <div class="checkboxes">
-              <input type="checkbox" id="email-updates" />
-              <label for="email-updates">Email Updates</label>
-              <input type="checkbox" id="phone" />
-              <label for="phone">Phone Follow-up</label>
-              <input type="checkbox" id="newsletter" />
-              <label for="newsletter">Newsletter</label>
-            </div>
+        </div>
+        <div class="submit-section">
+          <div class="save-draft">
+            <p>Save Draft</p>
           </div>
-          <div class="submit-section">
-            <div class="save-draft">
-              <p>Save Draft</p>
-            </div>
-            <div class="send-message">
-              <p>Send Message</p>
-            </div>
+          <div class="send-message">
+            <p>Send Message</p>
           </div>
         </div>
       </form>
