@@ -7,6 +7,11 @@
   font-size: 14px;
 }
 
+input {
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+}
+
 body {
   background: #3ba5cc;
   background: linear-gradient(
@@ -39,18 +44,22 @@ main > h3 {
   padding-top: 2px;
 }
 
-.name-section {
+form {
+  padding: 10px;
+}
+
+form > .name-section {
   display: flex;
   flex-direction: row;
 }
 
-.name-section > * {
+form > .name-section > * {
   display: flex;
   flex-direction: column;
   margin: 2px;
 }
 
-input {
-  border-radius: 3px;
-  border: 1px solid lightgrey;
+form > .email-section {
+  display: flex;
+  flex-direction: column;
 }
