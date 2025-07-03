@@ -104,3 +104,7 @@ form > .message {
 form > .message > input {
   padding-bottom: 30px;
 }
+
+form > .contact-preferences > p {
+  margin-bottom: 10px;
+}
