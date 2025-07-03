@@ -12,10 +12,6 @@ input {
   border: 1px solid lightgrey;
 }
 
-input::placeholder {
-  color: black;
-}
-
 body {
   background: #3ba5cc;
   background: linear-gradient(
@@ -81,4 +77,17 @@ form > .subject-priority > div {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+form > .subject-priority > div > input::placeholder {
+  color: black;
+}
+
+form > .message {
+  display: flex;
+  flex-direction: column;
+}
+
+form > .message > input {
+  padding-bottom: 30px;
 }
