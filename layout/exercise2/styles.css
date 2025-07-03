@@ -10,9 +10,15 @@ body {
 
 header {
   display: flex;
-  background-color: rgb(138, 140, 229);
   color: white;
   font-size: 14px;
+
+  background: #45cdff;
+  background: linear-gradient(
+    90deg,
+    rgba(69, 205, 255, 1) 0%,
+    rgba(134, 3, 163, 1) 100%
+  );
 }
 
 .col {
