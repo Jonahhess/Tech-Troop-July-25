@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 body {
@@ -11,9 +12,17 @@ body {
     rgba(59, 165, 204, 1) 0%,
     rgba(171, 14, 207, 1) 100%
   );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
 
 main {
+  background-color: white;
+  border-radius: 10px;
+  aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
