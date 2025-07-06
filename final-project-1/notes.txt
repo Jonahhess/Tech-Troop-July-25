@@ -1,0 +1,65 @@
+Mobile first design
+
+Fonts:
+h1
+h2
+h3
+p
+details, buttons, footer
+rounded: buttons, cards
+circle: icons, picture
+text-center: greet description, about me description, contact information
+
+Layout:
+flex: column
+Header
+    flex: row
+Greeting
+    flex: row wrap
+    Words: column, center on mobile, left on desktop
+        title
+        description
+        button
+Skills: column (stays same size)
+    skills: space-between
+My Projects: row, media wrap / media column
+    Cards: nothing dynamic except button flex
+Get in Touch
+    form gets smaller width to allow for
+    contact information: starts centered, gets left aligned
+
+
+Sections:
+Header: padding, lg font
+    name: blue
+    hamburger-menu / list: grey
+Greeting Box
+    words
+        title
+        description
+        button
+    photo
+About Me
+    paragraph
+Skills
+    list 
+        skill
+        img
+My Projects
+    card
+        img
+        title
+        description
+        button
+Get in Touch
+    form
+        name
+        email
+        message
+        button
+Contact Information
+    email
+    phone
+    location
+    3 buttons
+Footer
