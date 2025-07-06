@@ -152,6 +152,10 @@ li {
   flex-wrap: wrap;
 }
 
+#about-me {
+  margin-left: 1rem;
+}
+
 #skills-section > h3 {
   align-self: center;
 }
