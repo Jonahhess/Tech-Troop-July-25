@@ -94,7 +94,7 @@ li {
   align-self: center;
 }
 
-#get-in-touch:hover {
+.blue-button:hover {
   background-color: darkblue;
 }
 
@@ -185,6 +185,10 @@ li {
   text-align: center;
 }
 
+form {
+  justify-content: space-between;
+}
+
 #contact {
   align-items: center;
 }
@@ -217,6 +221,7 @@ li {
   }
   #contact {
     width: 25%;
+    align-items: flex-start;
   }
 }
 
