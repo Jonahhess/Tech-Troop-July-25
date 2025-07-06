@@ -1,3 +1,31 @@
 * {
   box-sizing: border-box;
 }
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+#name {
+  color: blue;
+  font: larger;
+}
+
+#menu-desktop {
+  display: hidden;
+}
+
+@media (min-width: 300px) {
+  #menu-desktop {
+    display: initial;
+  }
+  #menu-mobile {
+    display: hidden;
+  }
+}
