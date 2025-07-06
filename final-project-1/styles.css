@@ -27,7 +27,7 @@ header {
 
 #menu-desktop {
   display: none;
-  color: grey;
+  color: rgb(19, 19, 19);
 }
 
 li {
@@ -94,4 +94,18 @@ li {
   .img-container {
     margin-right: 5%;
   }
+}
+
+#skills-section {
+  display: flex;
+}
+
+#skills-section > h3 {
+  align-self: center;
+}
+
+#skills > li {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
 }
