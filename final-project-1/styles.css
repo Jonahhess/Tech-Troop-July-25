@@ -144,11 +144,37 @@ li {
 }
 
 #links {
-  justify-content: space-evenly;
+  width: 20%;
+  justify-content: flex-end;
 }
 
 .blue-icon {
-  width: 15%;
-  height: 15%;
+  width: 10%;
   background-color: blue;
+  flex: 1;
+  margin: 3%;
+  margin-left: 5%;
+  margin-top: 15%;
+}
+
+@media (min-width: 300px) {
+  #form-contact {
+    flex-direction: row;
+  }
+
+  form {
+    width: 75%;
+  }
+  #contact {
+    width: 25%;
+  }
+}
+
+#footer {
+  background-color: rgb(50, 50, 50);
+  padding: 2%;
+  margin-top: 5%;
+  color: white;
+  text-align: center;
+  font-size: small;
 }
