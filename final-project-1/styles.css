@@ -12,6 +12,10 @@
   flex-direction: column;
 }
 
+header {
+  justify-content: space-between;
+}
+
 #name {
   color: blue;
   font: larger;
