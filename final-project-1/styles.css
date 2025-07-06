@@ -48,6 +48,10 @@ li {
   text-align: center;
 }
 
+#greeting-description {
+  width: 25%;
+}
+
 .button {
   border-radius: 10%;
   padding: 5%;
@@ -60,21 +64,26 @@ li {
   background-color: blue;
 }
 
+#get-in-touch {
+  width: 25%;
+}
+
 .circle {
   aspect-ratio: 1 / 1;
+  width: auto;
   border-radius: 50%;
+  text-align: center;
 }
 
 #img-container {
   background-color: white;
-  justify-content: center;
-  align-items: center;
+  align-self: center;
 }
 
 @media (min-width: 300px) {
   #greeting-section {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   #words {
