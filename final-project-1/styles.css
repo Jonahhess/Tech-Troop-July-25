@@ -154,6 +154,7 @@ li {
 #cards {
   justify-content: space-evenly;
   margin: 2rem;
+  flex-wrap: wrap;
 }
 
 #card {
@@ -196,6 +197,7 @@ form {
 
 #contact {
   align-items: center;
+  margin-left: 1rem;
 }
 
 #links {
