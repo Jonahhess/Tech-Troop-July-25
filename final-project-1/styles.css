@@ -15,11 +15,17 @@
 #name {
   color: blue;
   font: larger;
+  min-width: 61px;
 }
 
 #menu-desktop {
-  display: hidden;
+  display: none;
   color: grey;
+}
+
+li {
+  list-style: none;
+  padding-left: 10px;
 }
 
 @media (min-width: 300px) {
@@ -27,7 +33,7 @@
     display: initial;
   }
   #menu-mobile {
-    display: hidden;
+    display: none;
   }
 }
 
