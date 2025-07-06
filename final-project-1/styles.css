@@ -42,10 +42,23 @@ li {
 
 #greeting-section {
   background-color: lightgray;
+  align-items: center;
 }
 
 #words {
   text-align: center;
+}
+
+.circle {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
+#img-container {
+  width: 50%;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 300px) {
