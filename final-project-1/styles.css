@@ -42,11 +42,22 @@ li {
 
 #greeting-section {
   background-color: lightgray;
-  align-items: center;
 }
 
 #words {
   text-align: center;
+}
+
+.button {
+  border-radius: 10%;
+  padding: 5%;
+  text-align: center;
+  margin: 10%;
+  color: white;
+}
+
+.blue-button {
+  background-color: blue;
 }
 
 .circle {
@@ -55,7 +66,6 @@ li {
 }
 
 #img-container {
-  width: 50%;
   background-color: white;
   justify-content: center;
   align-items: center;
@@ -63,7 +73,8 @@ li {
 
 @media (min-width: 300px) {
   #greeting-section {
-    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   #words {
