@@ -42,14 +42,16 @@ li {
 
 #greeting-section {
   background-color: lightgray;
+  justify-content: space-around;
 }
 
 #words {
   text-align: center;
+  padding: 10%;
 }
 
 #greeting-description {
-  width: 25%;
+  width: 50%;
 }
 
 .button {
@@ -78,6 +80,7 @@ li {
 #img-container {
   background-color: white;
   align-self: center;
+  padding: 10%;
 }
 
 @media (min-width: 300px) {
