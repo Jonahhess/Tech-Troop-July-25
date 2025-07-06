@@ -7,7 +7,7 @@
   flex-direction: row;
 }
 
-.flex-column {
+.flex-col {
   display: flex;
   flex-direction: column;
 }
@@ -28,5 +28,23 @@
   }
   #menu-mobile {
     display: hidden;
+  }
+}
+
+#greeting-section {
+  background-color: lightgray;
+}
+
+#words {
+  text-align: center;
+}
+
+@media (min-width: 300px) {
+  #greeting-section {
+    flex-wrap: wrap;
+  }
+
+  #words {
+    text-align: left;
   }
 }
