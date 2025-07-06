@@ -198,6 +198,7 @@ form {
 #contact {
   align-items: center;
   margin-left: 1rem;
+  /*TODO: make this section wrap */
 }
 
 #links {
