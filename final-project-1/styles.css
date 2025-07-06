@@ -134,3 +134,21 @@ li {
     flex-direction: row;
   }
 }
+
+#contact-section-title {
+  text-align: center;
+}
+
+#contact {
+  align-items: center;
+}
+
+#links {
+  justify-content: space-evenly;
+}
+
+.blue-icon {
+  width: 15%;
+  height: 15%;
+  background-color: blue;
+}
