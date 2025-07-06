@@ -54,15 +54,17 @@ li {
 }
 
 .button {
+  padding: 2%;
   border-radius: 10%;
   margin-top: 5%;
   text-align: center;
   color: white;
+  font-size: smaller;
 }
 
 .blue-button {
   background-color: blue;
-  /* TODO: correct button size */
+  align-self: center;
 }
 
 #get-in-touch:hover {
