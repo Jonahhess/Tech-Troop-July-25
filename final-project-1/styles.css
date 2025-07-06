@@ -15,7 +15,6 @@
 }
 
 header {
-  padding: 5%;
   justify-content: space-between;
 }
 
@@ -52,12 +51,10 @@ li {
 
 #words {
   text-align: center;
-  padding: 10%;
 }
 
 .button {
   border-radius: 10%;
-  padding: 10%;
   margin-top: 5%;
   text-align: center;
   color: white;
@@ -73,7 +70,6 @@ li {
   aspect-ratio: 1 / 1;
   width: auto;
   border-radius: 50%;
-  padding: 10%;
   text-align: center;
 }
 
@@ -96,16 +92,21 @@ li {
   }
 }
 
-#skills-section {
-  display: flex;
+#about-skills-section {
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 #skills-section > h3 {
   align-self: center;
 }
 
-#skills > li {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 300px) {
+  #about-me {
+    width: 75%;
+  }
+
+  #skills {
+    width: 25%;
+  }
 }
