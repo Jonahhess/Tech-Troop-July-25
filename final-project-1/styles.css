@@ -46,7 +46,8 @@ li {
 
 #greeting-section {
   background-color: lightgray;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 #words {
@@ -56,10 +57,11 @@ li {
 
 .button {
   border-radius: 10%;
-  padding: 5%;
-  margin: 10%;
+  padding: 10%;
+  margin-top: 5%;
   text-align: center;
   color: white;
+  aspect-ratio: 7 / 2;
 }
 
 .blue-button {
@@ -70,22 +72,25 @@ li {
   aspect-ratio: 1 / 1;
   width: auto;
   border-radius: 50%;
+  padding: 10%;
   text-align: center;
 }
 
 #img-container {
   background-color: white;
   align-self: center;
-  padding: 10%;
 }
 
 @media (min-width: 300px) {
   #greeting-section {
     flex-direction: row;
-    justify-content: space-around;
   }
 
   #words {
     text-align: left;
+  }
+
+  .img-container {
+    margin-right: 5%;
   }
 }
