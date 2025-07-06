@@ -19,6 +19,7 @@ header {
 #name {
   color: blue;
   font: larger;
+  font-weight: bold;
 }
 
 #menu-desktop {
