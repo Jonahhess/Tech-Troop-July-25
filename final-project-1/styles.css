@@ -148,17 +148,21 @@ li {
 }
 
 #links {
-  width: 20%;
-  justify-content: flex-end;
+  width: 50%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .blue-icon {
-  width: 10%;
+  width: 20%;
   background-color: blue;
   flex: 1;
-  margin: 3%;
-  margin-left: 5%;
-  margin-top: 15%;
+  margin: 5%;
+}
+
+.blue-icon:hover {
+  padding: 1%;
+  margin: 4%;
 }
 
 @media (min-width: 300px) {
@@ -177,7 +181,7 @@ li {
 #footer {
   background-color: rgb(50, 50, 50);
   padding: 2%;
-  margin-top: 5%;
+  margin-top: 10%;
   color: white;
   text-align: center;
   font-size: small;
