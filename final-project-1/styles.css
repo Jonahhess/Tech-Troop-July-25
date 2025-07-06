@@ -65,6 +65,10 @@ li {
   /* TODO: correct button size */
 }
 
+#get-in-touch:hover {
+  background-color: darkblue;
+}
+
 .circle {
   aspect-ratio: 1 / 1;
   width: auto;
