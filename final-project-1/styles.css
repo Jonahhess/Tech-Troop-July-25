@@ -58,12 +58,11 @@ li {
   margin-top: 5%;
   text-align: center;
   color: white;
-  aspect-ratio: 7 / 2;
 }
 
 .blue-button {
   background-color: blue;
-  /* Todo: make button have max-height, width  */
+  /* TODO: correct button size */
 }
 
 .circle {
@@ -108,5 +107,27 @@ li {
 
   #skills {
     width: 25%;
+  }
+}
+
+#my-projects-section {
+  justify-content: space-around;
+}
+
+#card {
+  border-radius: 10%;
+}
+.orange-button {
+  background-color: orange;
+  /* TODO: correct button size */
+}
+
+.card-img-container {
+  background-color: lightgray;
+}
+
+@media (min-width: 300px) {
+  #my-projects-section {
+    flex-direction: row;
   }
 }
