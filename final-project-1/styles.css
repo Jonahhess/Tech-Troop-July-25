@@ -148,8 +148,7 @@ li {
 }
 
 #about-skills-section {
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 #about-me {
@@ -160,7 +159,29 @@ li {
   align-self: center;
 }
 
+#skills > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+#progress-bar {
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 5px;
+  background-color: lightgray;
+  border-radius: 25%;
+}
+
+#progress {
+  background-color: blue;
+}
+
 @media (min-width: 300px) {
+  #about-skills-section {
+    flex-direction: row;
+  }
+
   #about-me {
     width: 75%;
   }
@@ -169,6 +190,7 @@ li {
     width: 25%;
   }
 }
+
 #my-projects-title {
   text-align: center;
 }
