@@ -19,6 +19,7 @@
 
 #menu-desktop {
   display: hidden;
+  color: grey;
 }
 
 @media (min-width: 300px) {
