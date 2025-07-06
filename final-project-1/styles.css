@@ -109,8 +109,11 @@ li {
     width: 25%;
   }
 }
+#my-projects-title {
+  text-align: center;
+}
 
-#my-projects-section {
+#cards {
   justify-content: space-around;
 }
 
@@ -127,7 +130,7 @@ li {
 }
 
 @media (min-width: 300px) {
-  #my-projects-section {
+  #cards {
     flex-direction: row;
   }
 }
