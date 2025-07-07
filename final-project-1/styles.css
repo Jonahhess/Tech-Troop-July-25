@@ -139,6 +139,11 @@ li {
   width: 50vw;
 }
 
+#img-container > img {
+  width: 100%;
+  border-radius: 50%;
+}
+
 @media (min-width: 400px) {
   #greeting-section {
     flex-direction: row;
