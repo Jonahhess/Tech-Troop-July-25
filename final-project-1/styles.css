@@ -42,6 +42,7 @@ body > div {
 
 header {
   justify-content: space-between;
+  margin: 1rem;
 }
 
 #words {
@@ -75,7 +76,7 @@ li {
   padding-left: 10px;
 }
 
-@media (min-width: 304px) {
+@media (min-width: 300px) {
   #menu-desktop {
     display: flex;
     align-items: center;
@@ -132,7 +133,7 @@ li {
   align-self: center;
 }
 
-@media (min-width: 304px) {
+@media (min-width: 300px) {
   #greeting-section {
     flex-direction: row;
   }
@@ -176,7 +177,7 @@ li {
   background-color: blue;
 }
 
-@media (min-width: 304px) {
+@media (min-width: 300px) {
   #about-skills-section {
     flex-direction: row;
   }
@@ -197,7 +198,6 @@ li {
 #cards {
   justify-content: space-evenly;
   margin: 2rem;
-  flex-wrap: wrap;
 }
 
 #card {
@@ -262,7 +262,7 @@ form {
   margin: 4%;
 }
 
-@media (min-width: 304px) {
+@media (min-width: 300px) {
   #form-contact {
     flex-direction: row;
   }
