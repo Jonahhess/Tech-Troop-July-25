@@ -202,19 +202,21 @@ li {
   background-color: blue;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 799px) {
   #about-skills-section {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   #about-me {
-    width: 75vw;
+    width: 55vw;
     text-align: left;
     margin-bottom: 0;
+    margin-left: 5rem;
   }
 
   #skills {
-    width: 25vw;
+    width: 33vw;
   }
 
   #skills > li:first-child {
@@ -306,7 +308,7 @@ form > textarea {
   margin: 4%;
 }
 
-@media (min-width: 502px) {
+@media (min-width: 900px) {
   form {
     margin-left: 5rem;
   }
@@ -317,6 +319,7 @@ form > textarea {
 
   #form-contact {
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   form {
@@ -342,6 +345,7 @@ form > textarea {
 #footer {
   text-align: center;
   background-color: rgb(50, 50, 50);
+  padding: 1.5rem;
 }
 
 #footer > p {
