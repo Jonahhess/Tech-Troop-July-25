@@ -264,6 +264,10 @@ form > input {
   margin-bottom: 0.5rem;
 }
 
+form > textarea {
+  border-color: lightgray;
+}
+
 #send-message {
   width: 100%;
   margin-left: 0;
