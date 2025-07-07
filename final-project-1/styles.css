@@ -199,24 +199,15 @@ li {
   }
 }
 
-#my-projects-title {
-  text-align: center;
+#my-projects-section {
+  justify-content: center;
+  align-items: center;
 }
 
 #cards {
-  justify-content: space-between;
   flex-wrap: wrap;
   margin: 2rem;
 }
-
-#card {
-  border-radius: 10%;
-}
-
-#card > div {
-  flex: 1;
-}
-
 .orange-button {
   background-color: orange;
   width: 100%;
@@ -231,12 +222,16 @@ li {
 }
 
 .card-text-container {
+  display: flex;
+  flex-direction: column;
   margin: 2rem;
+  align-items: center;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 502px) {
   #cards {
     flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
