@@ -205,6 +205,7 @@ li {
 }
 
 #cards {
+  width: 100%;
   flex-wrap: wrap;
   margin: 2rem;
 }
@@ -219,6 +220,7 @@ li {
   background-color: lightgray;
   justify-content: center;
   align-items: center;
+  padding: 4rem;
 }
 
 .card-text-container {
@@ -231,7 +233,7 @@ li {
 @media (min-width: 502px) {
   #cards {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
   }
 }
 
@@ -272,7 +274,7 @@ form {
   margin: 4%;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 502px) {
   .orange-button {
     width: initial;
   }
