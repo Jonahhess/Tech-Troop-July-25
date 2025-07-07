@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 2.5rem;
 }
@@ -50,10 +54,6 @@ main > div {
 header {
   justify-content: space-between;
   margin: 1rem;
-}
-
-#words {
-  margin-left: 1rem;
 }
 
 #name {
@@ -108,7 +108,7 @@ li {
 #words {
   text-align: center;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 #greeting-description {
@@ -288,6 +288,7 @@ form {
 form > input {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  margin-left: 1rem;
 }
 
 form > textarea {
@@ -296,7 +297,7 @@ form > textarea {
 
 #send-message {
   width: 100%;
-  margin-left: 0;
+  align-self: center;
 }
 
 #links {
@@ -326,6 +327,11 @@ form > textarea {
     width: initial;
   }
 
+  #contact-section {
+    margin: 1rem;
+    justify-content: center;
+  }
+
   #form-contact {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -345,7 +351,7 @@ form > textarea {
   }
 }
 
-@media (min-width: 913px) {
+@media (min-width: 994px) {
   #links {
     margin-top: 1.55rem;
   }
