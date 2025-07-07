@@ -26,6 +26,7 @@ p {
 
 body > div {
   padding: 4rem 0;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -151,12 +152,7 @@ li {
   }
 }
 
-#about-skills-section {
-  justify-content: flex-start;
-}
-
 #about-me {
-  margin-left: 1rem;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -189,18 +185,18 @@ li {
   }
 
   #about-me {
-    width: 75%;
+    width: 75vw;
     text-align: left;
     margin-bottom: 0;
   }
 
   #skills {
-    width: 25%;
+    width: 25vw;
   }
-}
 
-#my-projects-section {
-  width: 100%;
+  #skills > li:first-child {
+    margin-top: 0.75rem;
+  }
 }
 
 #my-projects-title {
@@ -208,8 +204,8 @@ li {
 }
 
 #cards {
-  width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 2rem;
 }
 
@@ -223,6 +219,7 @@ li {
 
 .orange-button {
   background-color: orange;
+  width: 100%;
   border-radius: 5%;
 }
 
@@ -243,10 +240,6 @@ li {
   }
 }
 
-#contact-section {
-  width: 100%;
-}
-
 #contact-section-title {
   text-align: center;
 }
@@ -261,10 +254,15 @@ form {
   /*TODO: make this section wrap */
 }
 
+#send-message {
+  width: 100%;
+  margin-left: 0;
+}
+
 #links {
   width: 50%;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .blue-icon {
@@ -280,6 +278,10 @@ form {
 }
 
 @media (min-width: 400px) {
+  .orange-button {
+    width: initial;
+  }
+
   #form-contact {
     flex-direction: row;
   }
@@ -291,11 +293,20 @@ form {
     width: 25%;
     align-items: flex-start;
   }
+
+  #send-message {
+    width: fit-content;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 913px) {
+  #links {
+    margin-top: 1.55rem;
+  }
 }
 
 #footer {
-  width: 100%;
-  max-width: 100%;
   text-align: center;
   background-color: rgb(50, 50, 50);
 }
