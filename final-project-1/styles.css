@@ -193,17 +193,22 @@ li {
   justify-content: space-between;
 }
 
-#progress-bar {
-  display: flex;
+.progress-bar {
+  top: 0.5rem;
   position: relative;
   width: 40px;
-  height: 5px;
+  height: 15px;
   background-color: lightgray;
   border-radius: 25%;
 }
 
-#progress {
+.progress {
   background-color: blue;
+  position: absolute;
+  margin-top: 2px;
+  width: 35px;
+  height: 10px;
+  border-radius: 25%;
 }
 
 @media (min-width: 799px) {
