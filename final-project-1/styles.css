@@ -277,6 +277,12 @@ form {
 }
 
 #footer {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
   background-color: rgb(50, 50, 50);
+}
+
+#footer > p {
   color: white;
 }
