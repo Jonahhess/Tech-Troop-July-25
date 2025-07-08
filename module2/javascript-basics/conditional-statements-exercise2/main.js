@@ -10,19 +10,16 @@
 // F: Below 60
 
 let grade = 100;
-
-for (const grade of grades) {
-  if (typeof grade !== "number" || grade > 100 || grade < 0) {
-    console.log("not a real grade");
-  } else if (grade >= 90) {
-    console.log("A");
-  } else if (grade >= 80) {
-    console.log("B");
-  } else if (grade >= 70) {
-    console.log("C");
-  } else if (grade >= 60) {
-    console.log("D");
-  } else {
-    console.log("F");
-  }
+if (typeof grade !== "number" || grade > 100 || grade < 0) {
+  console.log("not a real grade");
+} else if (grade >= 90) {
+  console.log("A");
+} else if (grade >= 80) {
+  console.log("B");
+} else if (grade >= 70) {
+  console.log("C");
+} else if (grade >= 60) {
+  console.log("D");
+} else {
+  console.log("F");
 }
