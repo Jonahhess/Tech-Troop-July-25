@@ -1,0 +1,6 @@
+Section 1: distance is out of scope.
+Section 2: cowSound is out of scope.
+Section 3: A-okay!
+Section 4: seed is out of scope.
+Section 5: umm.. does this code even compile? We should declare let found at the top.
+Section 6: isEnough is const. We can't update it...
