@@ -1,0 +1,12 @@
+Spot Check 1: O(1)
+Spot Check 2: O(1)
+Spot Check 3: O(m) - where m in the length of the max sublist in books.
+Spot Check 4: O(mn) - consider changing the algorithm to remove p,e who no longer need a job.
+Spot Check 5: O(n)
+Spot Check 6: O(1)
+
+Exercise 1: O(n)
+Exercise 2: O(log(n))
+Exercise 3: O(1)
+Exercise 4: O(mn) - n for each student, m for each answer
+Exercise 5: O(n)
