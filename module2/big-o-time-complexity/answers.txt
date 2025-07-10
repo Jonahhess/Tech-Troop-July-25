@@ -11,7 +11,7 @@ Exercise 3: O(1)
 Exercise 4: O(mn) - n for each student, m for each answer
 Exercise 5: O(n)
 
-Exercise 10: 
+Exercise 9: 
 Green - O(1)
 Yellow: O(log(n))
 Blue: O(n)
