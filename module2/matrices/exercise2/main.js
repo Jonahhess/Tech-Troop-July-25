@@ -1,7 +1,7 @@
 class Matrix {
   _matrix = [];
-  #numRows;
-  #numCols;
+  _numRows;
+  _numCols;
 
   constructor(rowNum, colNum) {
     for (let i = 0; i < rowNum; i++) {
@@ -11,8 +11,8 @@ class Matrix {
       }
       this._matrix.push(row);
     }
-    this.#numRows = rowNum;
-    this.#numCols = colNum;
+    this._numRows = rowNum;
+    this._numCols = colNum;
   }
 
   print() {
@@ -47,8 +47,8 @@ class Matrix {
   }
 
   findCoordinate(value) {
-    for (let y = 0; y < this.#numRows; y++) {
-      for (let x = 0; x < this.#numCols; x++) {
+    for (let y = 0; y < this._numRows; y++) {
+      for (let x = 0; x < this._numCols; x++) {
         if (this._matrix[y][x] === value) {
           return { x, y };
         }
@@ -56,10 +56,6 @@ class Matrix {
     }
   }
 }
-
-let m = new Matrix(3, 4);
-console.log(m.findCoordinate(12)); //prints {x: 3, y: 2}
-console.log(m.findCoordinate(7)); //prints {x: 2, y: 1}
 
 module.exports = {
   Matrix,
