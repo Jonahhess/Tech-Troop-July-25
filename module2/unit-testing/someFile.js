@@ -18,7 +18,9 @@ class PictureManager {
   }
 }
 
-module.exports = PictureManager;
+class ArrayManipulator {
+  zip() {}
+}
 
 module.exports = {
   add,
@@ -26,4 +28,5 @@ module.exports = {
   removeBugs,
   clearLowPriority,
   PictureManager,
+  ArrayManipulator,
 };
