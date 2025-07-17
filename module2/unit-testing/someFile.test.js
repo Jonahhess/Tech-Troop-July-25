@@ -3,6 +3,7 @@ const {
   calculateHyp,
   removeBugs,
   clearLowPriority,
+  PictureManager,
 } = require("./someFile.js");
 
 test("add should return sum of a + b", () => {
@@ -36,4 +37,14 @@ test("should contain only high priority", () => {
   highOnly.forEach((element) => {
     expect(element).toBe("HIGH");
   });
+});
+
+test("addPicture should add a picture URL to the pictureURLs array", function () {
+  //sanity
+  const picManager = new PictureManager();
+  expect(picManager.pictureURLs.length).toBe(0);
+
+  picManager.addPicture("some_url");
+  expect(picManager.pictureURLs.length).toBe(1); //test
+  expect(picManager.pictureURLs).toContain("some_url"); //double check
 });
