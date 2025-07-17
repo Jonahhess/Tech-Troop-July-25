@@ -2,4 +2,8 @@ const add = function (a, b) {
   return a + b;
 };
 
-module.exports = add;
+const calculateHyp = (a, b) => Math.sqrt(a * a + b * b);
+
+const removeBugs = (code) => code.filter((c) => c != "BUG");
+
+module.exports = { add, calculateHyp, removeBugs };
