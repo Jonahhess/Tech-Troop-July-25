@@ -10,7 +10,9 @@ test("should return correct values for ", () => {
   const isEven = Ex1.isEven(2);
   const isOdd = Ex1.isEven(1);
   const isUndefined = Ex1.isEven();
+  const tooManyArgs = Ex1.isEven(undefined, 1, 2, 3, 4, 5, 6, 7, 8, 9);
   expect(isEven).toBe(true);
   expect(isOdd).toBe(false);
   expect(isUndefined).toBe(false);
+  expect(tooManyArgs).toBe(false);
 });
