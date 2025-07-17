@@ -1,4 +1,9 @@
-const { add, calculateHyp, removeBugs } = require("./someFile.js");
+const {
+  add,
+  calculateHyp,
+  removeBugs,
+  clearLowPriority,
+} = require("./someFile.js");
 
 test("add should return sum of a + b", () => {
   let sum = add(1, 2);
@@ -23,4 +28,12 @@ test("should remove bugs from code", () => {
   let bugFreeCode = removeBugs(code);
   expect(bugFreeCode).not.toContain("BUG");
   expect(bugFreeCode).toContain("good code");
+});
+
+test("should contain only high priority", () => {
+  let objArr = ["LOW", "apples", "HIGH", "HIGH", "LOW"];
+  let highOnly = clearLowPriority(objArr);
+  highOnly.forEach((element) => {
+    expect(element).toBe("HIGH");
+  });
 });
