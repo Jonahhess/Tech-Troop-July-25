@@ -18,7 +18,20 @@ class Exercises {
       .join("");
   }
 
-  validate(arrayOfBools) {}
+  validate(arrayOfBools) {
+    if (!Array.isArray(arrayOfBools))
+      return { error: "Need at least one boolean" };
+
+    const filtered = arrayOfBools.filter(
+      (element) => typeof element === "boolean"
+    );
+
+    if (!filtered.length) return { error: "Need at least one boolean" };
+    const truths = filtered.filter((element) => element === true).length;
+    const falses = filtered.length - truths;
+
+    return truths > falses;
+  }
 }
 
 module.exports = Exercises;
