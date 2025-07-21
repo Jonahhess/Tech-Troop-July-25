@@ -37,13 +37,13 @@ class BSNode {
     return (
       parent.leftChild?.commonParentHelper(val1, val2, parent.leftChild) ||
       parent.rightChild?.commonParentHelper(val1, val2, parent.rightChild) ||
-      parent.value
+      parent
     );
   }
 
   findCommonParent(val1, val2) {
     const commonParent = this.commonParentHelper(val1, val2, this);
-    console.log(commonParent);
+    console.log(commonParent.value);
   }
 }
 
