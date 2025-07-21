@@ -42,7 +42,74 @@ class BSNode {
   }
 
   findCommonParent(val1, val2) {
-    return this.commonParentHelper(val1, val2, this);
+    return this.commonParentHelper(val1, val2, this) || this;
+  }
+
+  findSonToDelete(value) {
+    if (this.leftChild?.value === value) {
+      return ["leftChild", this.leftChild];
+    } else if (this.rightChild?.value === value) {
+      return ["rightChild", this.rightChild];
+    } else {
+      return ["", this];
+    }
+  }
+
+  countChildren() {
+    return !!this.leftChild + !!this.rightChild;
+  }
+
+  getOnlyChild() {
+    if (this.leftChild) {
+      return ["leftChild", this.leftChild];
+    }
+    return ["rightChild", this.rightChild];
+  }
+
+  getMaxLeftOfNode() {
+    let parentOfMax = this.leftChild;
+    let max = parentOfMax.rightChild;
+    while (max.rightChild) {
+      parentOfMax = max;
+      max = max.rightChild;
+    }
+    return [parentOfMax, max];
+  }
+
+  nodeRemovalAlgorithm(parent, value) {
+    let [side, nodeToDelete] = this.findSonToDelete(value);
+    let numKids = nodeToDelete.countChildren();
+
+    switch (numKids) {
+      case 0: {
+        parent[side] = undefined;
+        break;
+      }
+      case 1: {
+        parent[side] = nodeToDelete;
+        break;
+      }
+      case 2: {
+        const [parentOfMax, maxChild] = nodeToDelete.getMaxLeftOfNode();
+        if (side === "") {
+          // we are dealing with a root removal
+          this.value = maxChild.value;
+        } else {
+          parentOfMax[side].value = maxChild.value;
+          parentOfMax.rightChild = undefined;
+        }
+        break;
+      }
+      default: {
+        throw new Error("more than two kids? Impossible!");
+      }
+    }
+  }
+
+  removeNode(parent, value) {
+    const parentOfNodeToDelete = this.findCommonParent(value, value);
+    this.nodeRemovalAlgorithm(parentOfNodeToDelete, value);
+    return parent;
   }
 }
 
