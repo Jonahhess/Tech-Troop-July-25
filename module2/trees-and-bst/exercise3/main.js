@@ -42,8 +42,7 @@ class BSNode {
   }
 
   findCommonParent(val1, val2) {
-    const commonParent = this.commonParentHelper(val1, val2, this);
-    console.log(commonParent.value);
+    return this.commonParentHelper(val1, val2, this);
   }
 }
 
