@@ -13,6 +13,12 @@ root.find("bandana");
 root.find("ban");
 root.find("can");
 root.find("bana");
+console.log(
+  root.getValues("appl"),
+  root.getValues("ba"),
+  root.getValues("bana"),
+  root.getValues("car")
+);
 // root.remove("coconut");
 // root.remove("ana");
 // root.remove("app");
