@@ -14,6 +14,11 @@ class Trie {
   getValues(prefix) {
     return this.root.predictWords(prefix);
   }
+
+  // this is optional, but would be a great exercise if I have time
+  remove(value) {
+    return this.root.removeWord(value);
+  }
 }
 
 module.exports = Trie;
