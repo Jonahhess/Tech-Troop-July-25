@@ -21,7 +21,9 @@ class TNode {
 
   addWord(word) {
     if (word === "" || word === this.value) {
-      return false;
+      const flag = this.flag;
+      this.flag = true;
+      return !flag;
     }
     const prefix = this.longestCommonPrefix(word);
     const valueSuffix = this.value.slice(prefix.length);
@@ -35,12 +37,16 @@ class TNode {
       this.children[valueSuffix[0]] = new TNode(valueSuffix, true, children);
     }
 
-    if (wordSuffix) {
-      if (wordSuffix[0] in this.children) {
-        this.children[wordSuffix[0]].addWord(wordSuffix);
-      } else {
-        this.children[wordSuffix[0]] = new TNode(wordSuffix, true);
-      }
+    if (!wordSuffix) {
+      this.flag = true;
+      return true;
+    }
+
+    if (wordSuffix[0] in this.children) {
+      this.children[wordSuffix[0]].addWord(wordSuffix);
+    } else {
+      this.children[wordSuffix[0]] = new TNode(wordSuffix, true);
+      return true;
     }
   }
 
