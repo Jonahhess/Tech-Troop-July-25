@@ -19,6 +19,9 @@ console.log(
   root.getValues("bana"),
   root.getValues("car")
 );
-// root.remove("coconut");
-// root.remove("ana");
-// root.remove("app");
+root.remove("coconut");
+root.remove("ana");
+root.remove("app");
+root.remove("apple");
+root.remove("ban");
+root.remove("ban");
