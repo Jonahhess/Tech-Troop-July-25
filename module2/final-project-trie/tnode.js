@@ -111,10 +111,12 @@ class TNode {
           const child = Object.values(this.children)[0];
           this.value += child.value;
           this.children = child.children;
-          return -1;
+          return true;
         }
         default: {
+          const flag = this.flag;
           this.flag = false;
+          return flag;
         }
       }
     }
@@ -125,10 +127,13 @@ class TNode {
       return false;
     }
 
-    if (this.children[suffix[0]].removeWord(suffix) === -1) {
+    const remove = this.children[suffix[0]].removeWord(suffix);
+    if (remove === -1) {
       delete this.children[suffix[0]];
       return true;
     }
+
+    return remove;
   }
 }
 
