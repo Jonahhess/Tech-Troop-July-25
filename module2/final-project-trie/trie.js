@@ -14,9 +14,6 @@ class Trie {
   getValues(prefix) {
     return this.root.predictWords(prefix);
   }
-  findStartNode(word) {
-    return this.root.findStartNode(word);
-  }
 
   // this is optional, but would be a great exercise if I have time
   remove(value) {
