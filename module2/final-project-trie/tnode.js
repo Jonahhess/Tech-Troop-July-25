@@ -1,10 +1,11 @@
 class TNode {
-  constructor(value, flag = false, children = {}) {
+  constructor(value = "", flag = false, children = {}) {
     this.value = value;
     this.flag = flag;
     this.children = children;
   }
   longestCommonPrefix(word) {
+    if (typeof word !== "string") word = "";
     // code stolen from internet and then adapted
     let commonPrefix = "";
     const minLength = Math.min(word.length, this.value.length);
@@ -20,6 +21,7 @@ class TNode {
   }
 
   addWord(word) {
+    if (typeof word !== "string") return false;
     if (word === "" || word === this.value) {
       const flag = this.flag;
       this.flag = true;
@@ -34,6 +36,7 @@ class TNode {
       const children = { ...this.children };
       this.children = {};
       this.children[valueSuffix[0]] = new TNode(valueSuffix, true, children);
+      this.flag = false;
     }
 
     if (!wordSuffix) {
@@ -96,7 +99,7 @@ class TNode {
   }
 
   removeWord(word) {
-    if (word === "" || word === this.value) {
+    if ((word === "" || word === this.value) && this.flag === true) {
       const numKids = Object.keys(this.children).length;
       switch (numKids) {
         case 0: {
