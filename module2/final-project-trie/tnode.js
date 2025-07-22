@@ -78,20 +78,26 @@ class TNode {
 
   findStartNode(word) {
     if (word === "" || word === this.value) {
-      return this;
+      return [this, 0];
     }
     const prefix = this.longestCommonPrefix(word);
 
     if (prefix === word) {
-      return this;
+      return [this, prefix.length];
     }
 
     const suffix = word.slice(prefix.length);
     if (!(suffix[0] in this.children)) {
-      return false;
+      return [false, 0];
     }
 
     return this.children[suffix[0]].findStartNode(suffix);
+  }
+
+  predictWords(prefix) {
+    const [startNode, offset] = this.findStartNode(prefix);
+    const children = startNode ? startNode.gatherChildren() : [];
+    return children.map((element) => prefix + element.slice(offset));
   }
 }
 
