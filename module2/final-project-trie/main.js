@@ -13,7 +13,6 @@ root.find("bandana");
 root.find("ban");
 root.find("can");
 root.find("bana");
-root.gatherChildren();
 // root.getValues("apple");
 // root.getValues("cancoon");
 // root.getValues("");
