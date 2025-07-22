@@ -75,6 +75,24 @@ class TNode {
 
     return children.flat();
   }
+
+  findStartNode(word) {
+    if (word === "" || word === this.value) {
+      return this;
+    }
+    const prefix = this.longestCommonPrefix(word);
+
+    if (prefix === word) {
+      return this;
+    }
+
+    const suffix = word.slice(prefix.length);
+    if (!(suffix[0] in this.children)) {
+      return false;
+    }
+
+    return this.children[suffix[0]].findStartNode(suffix);
+  }
 }
 
 module.exports = TNode;
