@@ -1,6 +1,7 @@
 class TNode {
-  constructor(value, children = {}) {
+  constructor(value, flag = false, children = {}) {
     this.value = value;
+    this.flag = flag;
     this.children = children;
   }
   longestCommonPrefix(word) {
@@ -26,25 +27,26 @@ class TNode {
     const valueSuffix = this.value.slice(prefix.length);
     const wordSuffix = word.slice(prefix.length);
     this.value = prefix;
+    this.flag = false;
 
     if (valueSuffix) {
       const children = { ...this.children };
       this.children = {};
-      this.children[valueSuffix[0]] = new TNode(valueSuffix, children);
+      this.children[valueSuffix[0]] = new TNode(valueSuffix, true, children);
     }
 
     if (wordSuffix) {
       if (wordSuffix[0] in this.children) {
         this.children[wordSuffix[0]].addWord(wordSuffix);
       } else {
-        this.children[wordSuffix[0]] = new TNode(wordSuffix);
+        this.children[wordSuffix[0]] = new TNode(wordSuffix, true);
       }
     }
   }
 
   findWord(word) {
     if (word === "" || word === this.value) {
-      return true;
+      return this.flag;
     }
     const prefix = this.longestCommonPrefix(word);
     const suffix = word.slice(prefix.length);
