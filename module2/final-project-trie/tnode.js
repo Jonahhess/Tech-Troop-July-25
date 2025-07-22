@@ -23,22 +23,19 @@ class TNode {
       return false;
     }
     const prefix = this.longestCommonPrefix(word);
-    const suffixesToAdd = [
-      word.slice(prefix.length),
-      this.value.slice(prefix.length),
-    ];
+    const wordSuffix = word.slice(prefix.length);
+    const valueSuffix = this.value.slice(prefix.length);
+    const childrenOfValue = { ...this.children };
     this.value = prefix;
-    suffixesToAdd
-      .filter((s) => s.length)
-      .forEach((s) => {
-        const firstLetter = s[0];
-        if (!(firstLetter in this.children)) {
-          this.children[firstLetter] = new TNode(s);
-        } else {
-          this.children[firstLetter].addWord(s);
-        }
-        return true;
-      });
+    this.children = {};
+
+    if (wordSuffix) {
+      this.children[wordSuffix[0]] = new TNode(wordSuffix);
+    }
+
+    if (valueSuffix) {
+      this.children[valueSuffix[0]] = new TNode(valueSuffix, childrenOfValue);
+    }
   }
 }
 
