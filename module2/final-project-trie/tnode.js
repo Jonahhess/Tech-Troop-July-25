@@ -76,12 +76,8 @@ class TNode {
   }
 
   findStartNode(word) {
-    if (word === "" || word === this.value) {
-      return [this, 0];
-    }
     const prefix = this.longestCommonPrefix(word);
-
-    if (prefix === word) {
+    if (word === "" || word === this.value || prefix === word) {
       return [this, prefix.length];
     }
 
