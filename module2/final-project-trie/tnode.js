@@ -23,13 +23,16 @@ class TNode {
       return false;
     }
     const prefix = this.longestCommonPrefix(word);
-    if (prefix === this.value) {
-      const restOfWord = word.slice(prefix.length);
-      this.children[restOfWord[0]] = new Node(restOfWord);
-      return true;
-    }
+    const suffixesToAdd = [
+      word.slice(prefix.length),
+      this.value.slice(prefix.length),
+    ];
+    this.value = prefix;
+    suffixesToAdd
+      .filter((s) => s.length)
+      .forEach((s) => (this.children[s[0]] = new TNode(s)));
 
-    //return this.children[letter].addWord(word.slice[1]);
+    return true;
   }
 }
 
