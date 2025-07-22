@@ -23,19 +23,36 @@ class TNode {
       return false;
     }
     const prefix = this.longestCommonPrefix(word);
-    const wordSuffix = word.slice(prefix.length);
     const valueSuffix = this.value.slice(prefix.length);
-    const childrenOfValue = { ...this.children };
+    const wordSuffix = word.slice(prefix.length);
     this.value = prefix;
-    this.children = {};
-
-    if (wordSuffix) {
-      this.children[wordSuffix[0]] = new TNode(wordSuffix);
-    }
 
     if (valueSuffix) {
-      this.children[valueSuffix[0]] = new TNode(valueSuffix, childrenOfValue);
+      const children = { ...this.children };
+      this.children = {};
+      this.children[valueSuffix[0]] = new TNode(valueSuffix, children);
     }
+
+    if (wordSuffix) {
+      if (wordSuffix[0] in this.children) {
+        this.children[wordSuffix[0]].addWord(wordSuffix);
+      } else {
+        this.children[wordSuffix[0]] = new TNode(wordSuffix);
+      }
+    }
+  }
+
+  findWord(word) {
+    if (word === "" || word === this.value) {
+      return true;
+    }
+    const prefix = this.longestCommonPrefix(word);
+    const suffix = word.slice(prefix.length);
+    if (!(suffix[0] in this.children)) {
+      return false;
+    }
+
+    return this.children[suffix[0]].findWord(suffix);
   }
 }
 
