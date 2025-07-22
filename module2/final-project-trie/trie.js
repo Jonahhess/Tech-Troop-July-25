@@ -14,6 +14,9 @@ class Trie {
   getValues(prefix) {
     return this.root.predictWords(prefix);
   }
+  gatherChildren() {
+    return this.root.gatherChildren();
+  }
 
   // this is optional, but would be a great exercise if I have time
   remove(value) {
