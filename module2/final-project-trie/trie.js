@@ -2,9 +2,17 @@
 const TNode = require("./tnode.js");
 
 class Trie {
-  // internal class tNode
   constructor() {
     this.root = new TNode("", false, {});
+  }
+  add(value) {
+    return this.root.addWord(value);
+  }
+  find(value) {
+    return this.root.findWord(value);
+  }
+  getValues(prefix) {
+    return this.root.predictWords(prefix);
   }
 }
 
