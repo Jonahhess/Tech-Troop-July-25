@@ -1,5 +1,5 @@
 class TNode {
-  constructor(value, children) {
+  constructor(value, children = {}) {
     this.value = value;
     this.children = children;
   }
@@ -30,9 +30,15 @@ class TNode {
     this.value = prefix;
     suffixesToAdd
       .filter((s) => s.length)
-      .forEach((s) => (this.children[s[0]] = new TNode(s)));
-
-    return true;
+      .forEach((s) => {
+        const firstLetter = s[0];
+        if (!(firstLetter in this.children)) {
+          this.children[firstLetter] = new TNode(s);
+        } else {
+          this.children[firstLetter].addWord(s);
+        }
+        return true;
+      });
   }
 }
 
