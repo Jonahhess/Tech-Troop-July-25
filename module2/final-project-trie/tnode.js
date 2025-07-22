@@ -22,17 +22,10 @@ class TNode {
     if (word === "" || word === this.value) {
       return false;
     }
-
-    const letter = word[0];
-    if (this.value === "" && !(letter in this.children)) {
-      this.children[letter] = new Node(word); // adding entire word as value
-      return true;
-    }
-
     const prefix = this.longestCommonPrefix(word);
     if (prefix === this.value) {
       const restOfWord = word.slice(prefix.length);
-      this.children[restOfWord[0]] = restOfWord;
+      this.children[restOfWord[0]] = new Node(restOfWord);
       return true;
     }
 
