@@ -23,7 +23,7 @@ while (!endProgram) {
     }
     case "complete": {
       const suggestions = root.getValues(word);
-      suggestions
+      suggestions.length
         ? view.printComplete(word, suggestions)
         : view.printCannotComplete(word);
       break;
