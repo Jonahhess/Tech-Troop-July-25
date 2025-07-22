@@ -1,4 +1,3 @@
-// this trie implementation is going to be compressed, which is harder to deal with but offers better performance.
 const TNode = require("./tnode.js");
 
 class Trie {
@@ -15,7 +14,6 @@ class Trie {
     return this.root.predictWords(prefix);
   }
 
-  // this is optional, but would be a great exercise if I have time
   remove(value) {
     return this.root.removeWord(value);
   }
