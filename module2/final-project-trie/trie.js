@@ -3,7 +3,7 @@ const TNode = require("./tnode.js");
 
 class Trie {
   constructor() {
-    this.root = new TNode("", {});
+    this.root = new TNode("");
   }
   add(value) {
     return this.root.addWord(value);
