@@ -99,6 +99,37 @@ class TNode {
     const children = startNode ? startNode.gatherChildren() : [];
     return children.map((element) => prefix + element.slice(offset));
   }
+
+  removeWord(word) {
+    if (word === "" || word === this.value) {
+      const numKids = Object.keys(this.children).length;
+      switch (numKids) {
+        case 0: {
+          return -1;
+        }
+        case 1: {
+          const child = Object.values(this.children)[0];
+          this.value += child.value;
+          this.children = child.children;
+          return -1;
+        }
+        default: {
+          this.flag = false;
+        }
+      }
+    }
+
+    const prefix = this.longestCommonPrefix(word);
+    const suffix = word.slice(prefix.length);
+    if (!(suffix[0] in this.children)) {
+      return false;
+    }
+
+    if (this.children[suffix[0]].removeWord(suffix) === -1) {
+      delete this.children[suffix[0]];
+      return true;
+    }
+  }
 }
 
 module.exports = TNode;
