@@ -19,15 +19,11 @@ class TNode {
   }
 
   addWord(word) {
-    const letter = word[0];
-    if (letter === "") {
-      return true;
-    }
-
-    if (word === this.value) {
+    if (word === "" || word === this.value) {
       return false;
     }
 
+    const letter = word[0];
     if (this.value === "" && !(letter in this.children)) {
       this.children[letter] = new Node(word); // adding entire word as value
       return true;
