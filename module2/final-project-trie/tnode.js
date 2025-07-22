@@ -62,6 +62,19 @@ class TNode {
 
     return this.children[suffix[0]].findWord(suffix);
   }
+
+  gatherChildren(prefix = "") {
+    const children = [];
+    if (this.flag) {
+      children.push(prefix + this.value);
+    }
+
+    for (const value of Object.values(this.children)) {
+      children.push(value.gatherChildren(prefix + this.value));
+    }
+
+    return children.flat();
+  }
 }
 
 module.exports = TNode;
