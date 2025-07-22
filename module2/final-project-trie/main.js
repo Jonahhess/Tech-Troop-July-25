@@ -1,27 +1,45 @@
 const Trie = require("./trie.js");
+const view = require("./view.js");
+const prompt = require("prompt-sync")();
 
 const root = new Trie();
-root.add("apple");
-root.add("app");
-root.add("anaconda");
-root.add("banana");
-root.add("bandana");
-root.add("ban");
-root.find("app");
-root.find("anaconda");
-root.find("bandana");
-root.find("ban");
-root.find("can");
-root.find("bana");
-console.log(
-  root.getValues("appl"),
-  root.getValues("ba"),
-  root.getValues("bana"),
-  root.getValues("car")
-);
-root.remove("coconut");
-root.remove("ana");
-root.remove("app");
-root.remove("apple");
-root.remove("ban");
-root.remove("ban");
+view.printWelcome();
+let endProgram = false;
+while (!endProgram) {
+  let input = prompt("> ");
+  let [op, word] = input.split(" ");
+  word = word || "";
+
+  switch (op) {
+    case "add": {
+      root.add(word)
+        ? view.printAdded(word)
+        : view.printWordAlreadyExists(word);
+      break;
+    }
+    case "find": {
+      root.find(word) ? view.printFound(word) : view.printNotFound(word);
+      break;
+    }
+    case "complete": {
+      const suggestions = root.getValues(word);
+      suggestions
+        ? view.printComplete(word, suggestions)
+        : view.printCannotComplete(word);
+      break;
+    }
+    case "remove": {
+      root.remove(word) ? view.printRemoved(word) : view.printNotFound(word);
+      break;
+    }
+    case "exit": {
+      view.printExit();
+      endProgram = true;
+      break;
+    }
+    default: {
+      view.printHelp();
+      break;
+    }
+  }
+}
