@@ -29,7 +29,6 @@ class TNode {
     const valueSuffix = this.value.slice(prefix.length);
     const wordSuffix = word.slice(prefix.length);
     this.value = prefix;
-    this.flag = false;
 
     if (valueSuffix) {
       const children = { ...this.children };
@@ -43,7 +42,7 @@ class TNode {
     }
 
     if (wordSuffix[0] in this.children) {
-      this.children[wordSuffix[0]].addWord(wordSuffix);
+      return this.children[wordSuffix[0]].addWord(wordSuffix);
     } else {
       this.children[wordSuffix[0]] = new TNode(wordSuffix, true);
       return true;
@@ -105,6 +104,7 @@ class TNode {
       const numKids = Object.keys(this.children).length;
       switch (numKids) {
         case 0: {
+          this.flag = false;
           return -1;
         }
         case 1: {
