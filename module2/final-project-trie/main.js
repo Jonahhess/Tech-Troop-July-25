@@ -8,7 +8,7 @@ let endProgram = false;
 while (!endProgram) {
   let input = prompt("> ");
   let [op, word] = input.split(" ");
-  word = word || "";
+  word = typeof word === "string" ? word : "";
   word = word.toLowerCase();
 
   switch (op) {
