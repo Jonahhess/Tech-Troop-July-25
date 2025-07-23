@@ -25,4 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("addBtn").addEventListener("click", () => {
     update.addReservation();
   });
+  // sends update message - calls update, which updates the model, which updates the view.
+  document.getElementById("claimBtn").addEventListener("click", () => {
+    update.claimReservation();
+  });
 });

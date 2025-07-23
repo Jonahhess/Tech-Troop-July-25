@@ -17,4 +17,8 @@ export const addReservation = () => {
 };
 
 // listened to in view fn - fname provided by Object.entries
-export const claimReservation = (fname) => model.claimReservation(fname);
+export const claimReservation = () => {
+  const addInput = document.getElementById("add-name");
+  const fname = addInput.value;
+  model.claimReservation(fname);
+};
