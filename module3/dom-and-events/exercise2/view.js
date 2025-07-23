@@ -18,6 +18,10 @@ export const renderModel = (model) => {
     reservations.appendChild(li);
   });
 };
+
+export const printReservationStatus = (msg) =>
+  (document.getElementById("claim-msg").innerHTML = msg);
+
 document.addEventListener("DOMContentLoaded", () => {
   update.initialize(); // roundabout way of saying model init
 
