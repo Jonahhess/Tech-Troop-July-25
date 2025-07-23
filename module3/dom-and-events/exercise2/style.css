@@ -1,0 +1,10 @@
+#reservations-container {
+  background-color: rgb(247, 247, 247);
+  width: 400px;
+  aspect-ratio: 1;
+}
+
+#input-container {
+  display: flex;
+  justify-content: space-between;
+}

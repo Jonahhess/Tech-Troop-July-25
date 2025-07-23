@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Reservation System</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="view.js" type="module"></script>
+  </head>
+  <body>
+    <h1>Reservations</h1>
+    <div id="reservations-container">
+      <div id="input-container">
+        <div id="add-container">
+          <label for="add-name">Name</label>
+          <br />
+          <input type="text" id="add-name" placeholder="Add New Reservation" />
+        </div>
+        <div id="claimed-container">
+          <label for="claimedStatus">Claimed?</label>
+          <br />
+          <input type="checkbox" id="claimedStatus" />
+        </div>
+        <button id="addBtn">save</button>
+      </div>
+      <ol id="reservations"></ol>
+    </div>
+  </body>
+</html>
