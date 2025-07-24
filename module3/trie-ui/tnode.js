@@ -94,7 +94,8 @@ export default class TNode {
 
   predictWords(prefix) {
     const [startNode, offset] = this.findStartNode(prefix);
-    const children = startNode ? startNode.gatherChildren() : [];
+    let children = startNode ? startNode.gatherChildren() : [];
+    children.sort();
     return children.map((element) => prefix + element.slice(offset));
   }
 
