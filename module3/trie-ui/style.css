@@ -21,10 +21,10 @@ h1 {
 }
 
 input {
-  flex: 2;
+  flex: 4;
 }
 
-#add-word-container > button {
+#word-container > button {
   flex: 1;
 }
 
