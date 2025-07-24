@@ -1,4 +1,4 @@
-class TNode {
+export default class TNode {
   constructor(value = "", flag = false, children = {}) {
     this.value = value;
     this.flag = flag;
@@ -135,5 +135,3 @@ class TNode {
     return remove;
   }
 }
-
-module.exports = TNode;
