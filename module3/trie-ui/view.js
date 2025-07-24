@@ -34,16 +34,3 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("suggestions").innerHTML = model.getValues(value);
     });
 });
-
-const printComplete = (prefix, words) =>
-  console.log(`Suggestions for '${prefix}': ${words.join(", ")}`);
-
-const printCannotComplete = (prefix) =>
-  printFailure(`No suggestions found for prefix '${prefix}'`);
-
-const printWordAlreadyExists = (word) =>
-  printFailure(`'${word}' already exists in dictionary`);
-
-const printExit = () => console.log("Goodbye!");
-
-const printRemoved = (word) => printSuccess(`Successfully removed '${word}'`);
