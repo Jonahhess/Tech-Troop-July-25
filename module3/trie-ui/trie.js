@@ -1,4 +1,4 @@
-const TNode = require("./tnode.js");
+import TNode from "./tnode.js";
 
 export default class Trie {
   constructor() {
