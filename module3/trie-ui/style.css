@@ -35,6 +35,11 @@ input {
   display: flex;
 }
 
+#autocomplete-container {
+  display: flex;
+  flex-direction: column;
+}
+
 #dictionary-count {
   flex-direction: column;
   align-items: center;
