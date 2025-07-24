@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: lightgreen;
+}
+
+form > * {
+  margin: 10px;
+  flex: 1;
+}
+
+form > #salary-bday {
+  display: flex;
+  justify-content: space-between;
+}
