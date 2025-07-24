@@ -8,16 +8,17 @@
     <script src="view.js" type="module"></script>
   </head>
   <body>
-    <h1>Word Finder</h1>
+    <h1>My Dictionary</h1>
     <div id="container">
-      <div id="add-word-container">
-        <input type="text" placeholder="Enter a word to add to dictionary" />
-        <button id="add-word-btn">Add Word</button>
+      <div id="word-container">
+        <input id="word-input" type="text" placeholder="Enter value" />
+        <button id="add-btn">Add</button>
+        <button id="remove-btn">Remove</button>
       </div>
       <div id="status-container">
         <p id="status">Status</p>
       </div>
-      <div id="autocomplete">
+      <div id="autocomplete-container">
         <input type="text" placeholder="Start typing to see suggestions..." />
         <p id="suggestions"></p>
       </div>
