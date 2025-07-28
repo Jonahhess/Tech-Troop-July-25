@@ -5,12 +5,10 @@ const update = {
     return model;
   },
   add: (name, text) => {
-    model[name] = text;
-    return model;
+    return model.set(name, text);
   },
   remove: (name) => {
-    delete model[name];
-    return model;
+    return model.delete(name);
   },
 };
 

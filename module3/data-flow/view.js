@@ -1,14 +1,15 @@
 import update from "./update.js";
 
 const render = (model) => {
+  debugger;
   const posts = document.getElementById("posts");
   posts.innerHTML = "";
-  Object.entries(model).forEach(([name, text]) => {
+  for (const [name, text] of posts) {
     const li = document.createElement("li");
     li.innerHTML = `${name} posted: ${text}`;
     li.onclick = () => render(update.remove(name));
     posts.appendChild(li);
-  });
+  }
 };
 
 export default render;

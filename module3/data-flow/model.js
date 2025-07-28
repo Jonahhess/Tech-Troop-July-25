@@ -1,2 +1,2 @@
-const model = {};
+const model = new Map();
 export default model;
