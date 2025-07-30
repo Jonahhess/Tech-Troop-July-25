@@ -25,4 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((response) => (target.src = response.data.embed_url))
       .catch((error) => (target.innerHTML = error));
   });
+
+  const clearCacheButton = document.getElementById("clear-cache-button");
+  clearCacheButton.addEventListener("click", () => localStorage.clear());
 });
