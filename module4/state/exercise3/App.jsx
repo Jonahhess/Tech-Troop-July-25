@@ -22,7 +22,6 @@ export default function App() {
   const [state, setState] = useState(data);
 
   function changePage() {
-    console.log(state);
     setState({
       ...state,
       currentPage: state.currentPage === "Landing" ? "Home" : "Landing",
