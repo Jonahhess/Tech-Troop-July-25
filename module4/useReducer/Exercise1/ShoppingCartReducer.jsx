@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import reducer from "./reducer";
-import Product from "../useReducer-projects/src/Product";
+import Product from "./Product";
 import Item from "./Item";
 
 export default function ShoppingCartReducer() {

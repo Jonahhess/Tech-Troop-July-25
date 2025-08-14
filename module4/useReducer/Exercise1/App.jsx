@@ -1,4 +1,3 @@
-import "./App.css";
 import ShoppingCartReducer from "./ShoppingCartReducer";
 
 function App() {
