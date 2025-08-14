@@ -1,0 +1,72 @@
+import { useState } from "react";
+import List from "./List";
+import Conversation from "./Conversation";
+
+export default function Exercise2() {
+  const data = {
+    displayConversation: null,
+    conversations: [
+      {
+        with: "Laura",
+        convo: [
+          { text: "Hi", sender: "self" },
+          { text: "You there?", sender: "self" },
+          { text: "Yeah, hi, what's up?", sender: "other" },
+        ],
+      },
+      {
+        with: "Dad",
+        convo: [
+          { text: "Have you finished your school work yet?", sender: "other" },
+          { text: "Yes.", sender: "self" },
+          { text: "What do you mean, yes?", sender: "other" },
+          { text: "??", sender: "self" },
+        ],
+      },
+      {
+        with: "Shoobert",
+        convo: [
+          { text: "Shoobert!!!", sender: "self" },
+          { text: "Dude!!!!!!!!", sender: "other" },
+          { text: "Shooooooooo BERT!", sender: "self" },
+          { text: "You're my best friend", sender: "other" },
+          { text: "No, *you're* my best friend", sender: "self" },
+        ],
+      },
+    ],
+  };
+
+  const [state, setState] = useState(data);
+
+  function getConversation(name) {
+    if (state.conversations.some((c) => c.with === name)) {
+      setState({ ...state, displayConversation: name });
+    } else {
+      console.log(`error! name=${name} not found in conversations`);
+    }
+  }
+
+  function getList() {
+    if (state.displayConversation == null) {
+      console.log(
+        `error! getting list when display conversation=${state.displayConversation}`
+      );
+    }
+
+    setState({ ...state, displayConversation: null });
+  }
+
+  return state.displayConversation === null ? (
+    <List
+      contacts={state.conversations.map((c) => c.with)}
+      getConversation={getConversation}
+    ></List>
+  ) : (
+    <Conversation
+      conversation={state.conversations.find(
+        (c) => c.with === state.displayConversation
+      )}
+      getList={getList}
+    ></Conversation>
+  );
+}
