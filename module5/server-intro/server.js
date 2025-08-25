@@ -2,6 +2,8 @@ const http = require("http");
 
 const server = http.createServer(async (req, res) => {
   res.setHeader("Content-Type", "text/plain");
+  console.log(req.method);
+  console.log(req.url);
 
   if (req.method !== "GET") {
     res.statusCode = 404;
@@ -15,8 +17,7 @@ const server = http.createServer(async (req, res) => {
     } else if (req.url === "/contact") {
       res.write("Contact me at: jonahhessdev@gmail.com");
     } else {
-      res.statusCode = 400;
-      res.write(JSON.stringify({ error: "body must include content prop" }));
+      res.write("404 - Page not found");
     }
   }
   res.end();
